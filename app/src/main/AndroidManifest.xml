@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.krishak_anappforkisan">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KrishakAnAppForKisan">
+        <activity android:name=".MerchantBuyMprice"></activity>
+        <activity android:name=".MerchantBuyHome" />
+        <activity android:name=".SellSeed" />
+        <activity android:name=".MerchentHome" />
+        <activity android:name=".SellInsectisides" />
+        <activity android:name=".SellTools" />
+        <activity android:name=".SellFertilizers" />
+        <activity android:name=".SellSeeds" />
+        <activity android:name=".MerchentSell" />
+        <activity android:name=".MerchentBuyNew" />
+        <activity android:name=".FarmerHelp$MerchantBuy" />
+        <activity android:name=".ListBuyers" />
+        <activity android:name=".FarmerSellHome" />
+        <activity android:name=".BuySeeds" />
+        <activity
+            android:name=".ui.login.BuySeeds"
+            android:label="@string/title_activity_buy_seeds" />
+        <activity android:name=".BuyInsectisides" />
+        <activity
+            android:name=".BuyTools"
+            android:label="@string/title_activity_buy_tools"
+            android:theme="@style/Theme.KrishakAnAppForKisan.NoActionBar" />
+        <activity
+            android:name=".BuyFertilizer"
+            android:label="@string/title_activity_buy_fertilizer"
+            android:theme="@style/Theme.KrishakAnAppForKisan.NoActionBar" />
+        <activity android:name=".FarmerSell" />
+        <activity android:name=".FarmerBuy" />
+        <activity android:name=".FarmerHome" />
+        <activity android:name=".MarchentLogin" />
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_farmer_login"
+            android:theme="@style/Theme.KrishakAnAppForKisan.NoActionBar" />
+        <activity android:name=".UserChoise" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

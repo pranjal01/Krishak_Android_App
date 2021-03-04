@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">470509007915-b8hmfl01e4vau09dpmf6g9obg3mbqv0a.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://krishak-1da25-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">470509007915</string>
+    <string name="google_api_key" translatable="false">AIzaSyAFhUSOJserwViFGCUjo6tGb1o50D6mqxI</string>
+    <string name="google_app_id" translatable="false">1:470509007915:android:39e1f0a69a89506e39666e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAFhUSOJserwViFGCUjo6tGb1o50D6mqxI</string>
+    <string name="google_storage_bucket" translatable="false">krishak-1da25.appspot.com</string>
+    <string name="project_id" translatable="false">krishak-1da25</string>
+</resources>

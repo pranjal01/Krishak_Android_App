@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.krishak_anappforkisan"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="30" />
+
+    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.KrishakAnAppForKisan" >
+        <activity android:name="com.example.krishak_anappforkisan.MerchantBuyMprice" />
+        <activity android:name="com.example.krishak_anappforkisan.MerchantBuyHome" />
+        <activity android:name="com.example.krishak_anappforkisan.SellSeed" />
+        <activity android:name="com.example.krishak_anappforkisan.MerchentHome" />
+        <activity android:name="com.example.krishak_anappforkisan.SellInsectisides" />
+        <activity android:name="com.example.krishak_anappforkisan.SellTools" />
+        <activity android:name="com.example.krishak_anappforkisan.SellFertilizers" />
+        <activity android:name="com.example.krishak_anappforkisan.SellSeeds" />
+        <activity android:name="com.example.krishak_anappforkisan.MerchentSell" />
+        <activity android:name="com.example.krishak_anappforkisan.MerchentBuyNew" />
+        <activity android:name="com.example.krishak_anappforkisan.FarmerHelp$MerchantBuy" />
+        <activity android:name="com.example.krishak_anappforkisan.ListBuyers" />
+        <activity android:name="com.example.krishak_anappforkisan.FarmerSellHome" />
+        <activity android:name="com.example.krishak_anappforkisan.BuySeeds" />
+        <activity
+            android:name="com.example.krishak_anappforkisan.ui.login.BuySeeds"
+            android:label="@string/title_activity_buy_seeds" />
+        <activity android:name="com.example.krishak_anappforkisan.BuyInsectisides" />
+        <activity
+            android:name="com.example.krishak_anappforkisan.BuyTools"
+            android:label="@string/title_activity_buy_tools"
+            android:theme="@style/Theme.KrishakAnAppForKisan.NoActionBar" />
+        <activity
+            android:name="com.example.krishak_anappforkisan.BuyFertilizer"
+            android:label="@string/title_activity_buy_fertilizer"
+            android:theme="@style/Theme.KrishakAnAppForKisan.NoActionBar" />
+        <activity android:name="com.example.krishak_anappforkisan.FarmerSell" />
+        <activity android:name="com.example.krishak_anappforkisan.FarmerBuy" />
+        <activity android:name="com.example.krishak_anappforkisan.FarmerHome" />
+        <activity android:name="com.example.krishak_anappforkisan.MarchentLogin" />
+        <activity
+            android:name="com.example.krishak_anappforkisan.Login"
+            android:label="@string/title_activity_farmer_login"
+            android:theme="@style/Theme.KrishakAnAppForKisan.NoActionBar" />
+        <activity android:name="com.example.krishak_anappforkisan.UserChoise" />
+        <activity android:name="com.example.krishak_anappforkisan.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:directBootAware="true"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <!--
+                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+                clients to use it as well, by defining this registrar in their own core/common library.
+            -->
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <activity
+            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="genericidp" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebase.auth"
+                    android:path="/"
+                    android:scheme="recaptcha" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:visibleToInstantApps="true" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.example.krishak_anappforkisan.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
